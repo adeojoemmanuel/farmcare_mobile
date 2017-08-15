@@ -1,0 +1,70 @@
+<ion-header text-center>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+	      <ion-icon name="menu"></ion-icon>
+	    </button>
+		<ion-title>Feeds</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let post of posts">
+			<article>
+				<header>
+					<a>
+						<ion-avatar item-start>
+					      <img src="/assets/images/imm.jpg" />
+					    </ion-avatar>
+					</a><!-- the user's picture -->
+
+					<div>
+						<a href="">
+							{{post.by}}
+						</a> <!-- the user's name -->
+						<div>
+							{{post.location}}
+						</div> <!-- the user's location -->
+					</div>
+				</header>
+				
+				<div><!-- the image cont. -->
+					<img src="./assets/images/nomad.jpg" height="300" width="900" alt="">
+				</div>
+
+				<div><!-- Post hero content  -->
+					<section> <!-- Like and comment icons section  -->
+						<a href="">
+							<ion-icon name="ios-heart-outline"></ion-icon>
+						</a> <!-- Like icon button  -->
+						<a href="">
+							<ion-icon name="ios-chatbubbles-outline"></ion-icon>
+						</a> <!-- Comment icon button  -->
+					</section> 
+
+					<section> <!-- Number of views  -->
+						<span>{{post.views}}</span>  <!-- Exact number  -->
+						 views
+					</section>
+
+					<div>  <!-- Post description  -->
+						<ul>
+							<li>
+								<em><b><a href="">{{post.by}}</a></b></em> <!-- Poster's name  -->
+								<span>{{post.description}}</span> <!-- Poster's description  -->
+							</li> 
+							<!-- Viewer's Section for comment  -->
+							<li>
+								<em><b><a href="">{{post.comment.by}}</a></b></em> <!-- Commenter's name  -->
+								<span>{{post.comment.body}}</span> <!-- Commenter's comment  -->
+							</li> <!-- viewer's comment  -->
+						</ul>
+					</div>
+					
+				</div>
+			</article>
+		</ion-item>
+	</ion-list>
+</ion-content>

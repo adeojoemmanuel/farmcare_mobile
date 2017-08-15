@@ -1,0 +1,102 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item> -->
+
+      <!--
+      Want to add a Username? Here you go:-->
+
+      <!-- <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form> -->
+
+
+  <section class="w-section mobile-wrapper" >
+        <div class="page-content" id="main-stack" data-scroll="0">
+            <div class="">
+                <div class="logo-login" style="display: flex; align-items: center; justify-content: center; align-content: center; padding 0;">
+                  <!-- <img src="./assets/images/donut.png" height="90" width="90"> -->
+                </div>
+                <div class="bottom-section padding">
+                    <div class="w-form">
+                        <form id="submit-form" name="email-form" data-name="Email Form">
+                            <div>
+                                <label class="label-form" for="name-field">Fullname</label>
+                                <input class="w-input input-form" id="name-field" type="text" value="David Smith" name="fullname" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div>
+                                <label class="label-form" for="uname-field">Username</label>
+                                <input class="w-input input-form" id="uname-field" type="text" value="david.smith" name="uname" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div>
+                                <label class="label-form" for="email-field">Email</label>
+                                <input class="w-input input-form" id="email-field" type="email" value="david.smith@gmail.com" name="email" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div>
+                                <label class="label-form" for="phone-field">Phone</label>
+                                <input class="w-input input-form" id="phone-field" type="text" value="" placeholder="+234 XX XXXX XXXX" name="fullname" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div> 
+                                <label class="label-form" for="password">Password</label>
+                                <div class="w-clearfix block-input-combined">
+                                    <input class="w-input input-form left" value="password" id="password-field" type="password" name="password" required="required">
+                                </div>
+                                <div class="separator-button-input"></div>
+                            </div>
+                            <input class="w-button action-button" type="submit" value="Sign Up">
+                            <div class="separator-button"></div>
+                            <a class="link-upper" href="#" text-uppercase>Already have an account? <strong class="b-link" (click)="linklog()">Sign In</strong></a>
+                          </form>
+                        <div class="w-form-done">
+                            <p>Thank you! Your submission has been received!</p>
+                        </div>
+                        <div class="w-form-fail">
+                            <p>Oops! Something went wrong while submitting the form</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content loading-mask stop-loading" id="new-stack">
+            <div class="loading-icon">
+                <div class="navbar-button-icon icon ion-load-d"></div>
+            </div>
+        </div>
+        <div class="shadow-layer"></div>
+    </section>
+</ion-content>

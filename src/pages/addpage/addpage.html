@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add expenses</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <section class="w-section mobile-wrapper" >
+        <div class="page-content" id="main-stack" data-scroll="0">
+            <div class="">
+            	<div style="display: flex; align-items: center; justify-content: center; align-content: center;">
+                </div>
+                <div class="bottom-section padding">
+                    <div class="w-form">
+                        <form id="submit-form" name="email-form" data-name="Email Form">
+                            <div>
+                                <label class="label-form" for="name-field"> name</label>
+                                <input  class="w-input input-form" id="name-field" type="text" placeholder=" name" name="name" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div>
+                                <label class="label-form" for="uname-field"> time</label>
+                                <input  class="w-input input-form" id="uname-field" type="text" placeholder=" Time" name="Location" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <div>
+                                <label class="label-form" for="email-field">amount</label>
+                                <input  class="w-input input-form" id="email-field" type="email" placeholder="Amount" name="Cropname" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div>
+                            <!-- <div>
+                                <label class="label-form" for="phone-field">expected month of havest</label>
+                                <input  class="w-input input-form" id="phone-field" type="text" placeholder="" placeholder="expected month of havest" name="expected month of havest" required="required" autocomplete="off">
+                                <div class="separator-fields"></div>
+                            </div> -->
+                            <div> 
+                                <label class="label-form" for="password">description</label>
+                                <div class="w-clearfix block-input-combined">
+                                    <input  class="w-input input-form left" placeholder="description" id="description" type="text" name="description" required="required">
+                                </div>
+                                <div class="separator-button-input"></div>
+                            </div>
+                            <input class="w-button action-button" (click)="add()" type="submit" value="Add ">
+                            <div class="separator-button"></div>
+                          </form>
+                        <div class="w-form-done">
+                            <p>Thank you! Your submission has been received!</p>
+                        </div>
+                        <div class="w-form-fail">
+                            <p>Oops! Something went wrong while submitting the form</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content loading-mask stop-loading" id="new-stack">
+            <div class="loading-icon">
+                <div class="navbar-button-icon icon ion-load-d"></div>
+            </div>
+        </div>
+        <div class="shadow-layer"></div>
+    </section>
+</ion-content>

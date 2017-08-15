@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Farm Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="session">
+    <ion-item-sliding>
+      <button ion-item>
+        <h1>{{session.farmname}}</h1>
+        <p>farm location : {{session.location}}</p>
+        <p>date of plantation: {{session.dateplanted}}</p>
+        <p>expected date of harvest: {{session.expectedHaves}}</p>
+        <p>farm location : {{session.location}}</p>
+        <p>farm description : {{session.description}}</p>
+        <p>fertiliza level : {{session.fartilizer}}</p>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="form" *ngIf="settingsReady">
+    <ion-list *ngIf="page == 'main'">
+      <ion-item>
+        <ion-label stacked>Fullname</ion-label>
+        <ion-input placeholder="adeojo emmanuel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input placeholder="emmanuel.adeojo@yahoo.com"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Share Location</ion-label>
+        <ion-toggle></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>nickname</ion-label>
+        <ion-input placeholder="IMM"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Language</ion-label>
+        <ion-select>
+          <ion-option value="en" checked="true">English</ion-option>
+          <ion-option value="yo">Yoruba</ion-option>
+          <ion-option value="ha">Hausa</ion-option>
+          <ion-option value="ig">Igbo</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <button ion-item [navPush]="subSettings" [navParams]="profileSettings">
+        {{ 'SETTINGS_PROFILE_BUTTON' | translate }}
+      </button>
+    </ion-list>
+
+    <ion-list *ngIf="page == 'profile'">
+      <ion-item>
+        <ion-label>{{ 'SETTINGS_OPTION4' | translate }}</ion-label>
+        <ion-input formControlName="option4"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+
+</ion-content>
